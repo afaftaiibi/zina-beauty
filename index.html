@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr" id="html-lang">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Zina Beauty - La beauté marocaine, au naturel</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -11,124 +11,149 @@
       to { opacity: 1; }
     }
     .animate-fadeIn { animation: fadeIn 1s ease-in; }
+    [dir="rtl"] .text-right { text-align: right; }
+    [dir="rtl"] .flex-row { flex-direction: row-reverse; }
+    [dir="rtl"] .mr-2 { margin-right: 0; margin-left: 0.5rem; }
+    [dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-right: 0; margin-left: 1.5rem; }
   </style>
 </head>
-<!-- Bouton WhatsApp flottant -->
-<a href="https://wa.me/212642087740?text=Bonjour%20Zina%20Beauty,%20je%20souhaite%20prendre%20rendez-vous"
-   class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg z-50 animate-bounce hover:scale-105 transition"
-   target="_blank" title="Contactez-nous sur WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-white" viewBox="0 0 24 24">
-    <path d="M20.52 3.48A12.05 12.05 0 0012.01 0 11.94 11.94 0 001.67 18.3L0 24l5.83-1.52a11.94 11.94 0 0018.36-10.2 11.93 11.93 0 00-3.67-8.8zM12 22a9.99 9.99 0 01-5.2-1.42l-.37-.23-3.47.91.93-3.38-.24-.35A10.03 10.03 0 1122 12a9.99 9.99 0 01-10 10zm5.02-7.4c-.27-.14-1.61-.8-1.86-.89s-.43-.14-.62.14-.71.88-.87 1.06-.32.21-.59.07a8.17 8.17 0 01-2.39-1.47 8.86 8.86 0 01-1.64-2.03c-.17-.3-.02-.46.12-.6.13-.13.3-.34.45-.5s.2-.29.3-.48a.54.54 0 00-.03-.52c-.07-.14-.62-1.5-.85-2.06s-.44-.47-.6-.48h-.51a.98.98 0 00-.7.33 2.94 2.94 0 00-.92 2.17c0 1.28.92 2.52 1.04 2.7a10.67 10.67 0 004.46 4.19c.63.27 1.13.43 1.52.55a3.64 3.64 0 001.65.1 2.72 2.72 0 001.78-1.28 2.21 2.21 0 00.16-1.29c-.06-.1-.24-.17-.5-.3z"/>
-  </svg>
-</a>
-
 <body class="bg-[#FAF9F6] text-[#333333] font-sans">
-  <!-- Header -->
-<header class="bg-[#C8A2C8] text-white sticky top-0 z-50 shadow-md">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <!-- Logo -->
-    <div class="flex items-center">
-      <img src="logo.jpeg" alt="Logo Zina Beauty" class="w-12 h-12 rounded-full mr-2 object-cover">
-      <span class="text-2xl font-bold">Zina Beauty</span>
-    </div>
-    
-    <!-- Navigation -->
-    <nav class="space-x-6">
-      <a href="#accueil" class="hover:text-[#F7D6E0] transition">Accueil</a>
-      <a href="#apropos" class="hover:text-[#F7D6E0] transition">À propos</a>
-      <a href="#services" class="hover:text-[#F7D6E0] transition">Services</a>
-      <a href="#galerie" class="hover:text-[#F7D6E0] transition">Galerie</a>
-      <a href="#avis" class="hover:text-[#F7D6E0] transition">Avis</a>
-      <a href="#contact" class="hover:text-[#F7D6E0] transition">Contact</a>
-    </nav>
-  </div>
-</header>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/212642087740?text=Bonjour%20Zina%20Beauty,%20je%20souhaite%20prendre%20rendez-vous"
+     class="fixed bottom-6 right-4 bg-[#25D366] text-white p-3 rounded-full shadow-lg z-50 animate-bounce hover:scale-105 transition md:bottom-8 md:right-8"
+     target="_blank" title="Contactez-nous sur WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 fill-white" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A12.05 12.05 0 0012.01 0 11.94 11.94 0 001.67 18.3L0 24l5.83-1.52a11.94 11.94 0 0018.36-10.2 11.93 11.93 0 00-3.67-8.8zM12 22a9.99 9.99 0 01-5.2-1.42l-.37-.23-3.47.91.93-3.38-.24-.35A10.03 10.03 0 1122 12a9.99 9.99 0 01-10 10zm5.02-7.4c-.27-.14-1.61-.8-1.86-.89s-.43-.14-.62.14-.71.88-.87 1.06-.32.21-.59.07a8.17 8.17 0 01-2.39-1.47 8.86 8.86 0 01-1.64-2.03c-.17-.3-.02-.46.12-.6.13-.13.3-.34.45-.5s.2-.29.3-.48a.54.54 0 00-.03-.52c-.07-.14-.62-1.5-.85-2.06s-.44-.47-.6-.48h-.51a.98.98 0 00-.7.33 2.94 2.94 0 00-.92 2.17c0 1.28.92 2.52 1.04 2.7a10.67 10.67 0 004.46 4.19c.63.27 1.13.43 1.52.55a3.64 3.64 0 001.65.1 2.72 2.72 0 001.78-1.28 2.21 2.21 0 00.16-1.29c-.06-.1-.24-.17-.5-.3z"/>
+    </svg>
+  </a>
 
+  <!-- Header -->
+  <header class="bg-[#C8A2C8] text-white sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center flex-col md:flex-row">
+      <!-- Logo -->
+      <div class="flex items-center mb-4 md:mb-0">
+        <img src="logo.jpeg" alt="Logo Zina Beauty" class="w-10 h-10 rounded-full mr-2 object-cover">
+        <span class="text-xl md:text-2xl font-bold">Zina Beauty</span>
+      </div>
+      
+      <!-- Language Switcher -->
+      <div class="flex space-x-4 mb-4 md:mb-0">
+        <button onclick="changeLanguage('fr')" class="text-white hover:text-[#F7D6E0] transition">Français</button>
+        <button onclick="changeLanguage('ar')" class="text-white hover:text-[#F7D6E0] transition">العربية</button>
+        <button onclick="changeLanguage('en')" class="text-white hover:text-[#F7D6E0] transition">English</button>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#accueil" class="hover:text-[#F7D6E0] transition">Accueil</a>
+        <a href="#apropos" class="hover:text-[#F7D6E0] transition">À propos</a>
+        <a href="#services" class="hover:text-[#F7D6E0] transition">Services</a>
+        <a href="#galerie" class="hover:text-[#F7D6E0] transition">Galerie</a>
+        <a href="#avis" class="hover:text-[#F7D6E0] transition">Avis</a>
+        <a href="#contact" class="hover:text-[#F7D6E0] transition">Contact</a>
+      </nav>
+      <!-- Mobile Menu Toggle -->
+      <button id="mobile-menu-toggle" class="md:hidden text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <!-- Mobile Menu -->
+      <nav id="mobile-menu" class="hidden md:hidden flex-col w-full text-center space-y-4 mt-4">
+        <a href="#accueil" class="hover:text-[#F7D6E0] transition">Accueil</a>
+        <a href="#apropos" class="hover:text-[#F7D6E0] transition">À propos</a>
+        <a href="#services" class="hover:text-[#F7D6E0] transition">Services</a>
+        <a href="#galerie" class="hover:text-[#F7D6E0] transition">Galerie</a>
+        <a href="#avis" class="hover:text-[#F7D6E0] transition">Avis</a>
+        <a href="#contact" class="hover:text-[#F7D6E0] transition">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- Hero Section -->
-  <section id="accueil" class="relative h-[500px] flex items-center justify-center bg-cover bg-center animate-fadeIn" style="background-image: url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=2070&auto=format&fit=crop');">
-    <div class="text-center text-white bg-[#C8A2C8]/50 p-8 rounded-lg">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Bienvenue chez Zina Beauty</h1>
-      <p class="text-xl">Votre beauté, notre passion</p>
+  <section id="accueil" class="relative h-[300px] sm:h-[400px] md:h-[500px] flex items-center justify-center bg-cover bg-center animate-fadeIn" style="background-image: url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=2070&auto=format&fit=crop');">
+    <div class="text-center text-white bg-[#C8A2C8]/50 p-6 sm:p-8 rounded-lg">
+      <h1 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-4">Bienvenue chez Zina Beauty</h1>
+      <p class="text-lg sm:text-xl">Votre beauté, notre passion</p>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="apropos" class="py-16">
+  <section id="apropos" class="py-12 sm:py-16">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">À propos de nous</h2>
-      <p class="max-w-2xl mx-auto">Zina Beauty est un havre de paix dédié à la beauté marocaine authentique. Avec des soins inspirés des traditions et des techniques modernes, notre équipe vous offre une expérience unique pour sublimer votre beauté naturelle.</p>
+      <h2 class="text-2xl sm:text-3xl font-bold mb-6">À propos de nous</h2>
+      <p class="max-w-xl sm:max-w-2xl mx-auto text-sm sm:text-base">Zina Beauty est un havre de paix dédié à la beauté marocaine authentique. Avec des soins inspirés des traditions et des techniques modernes, notre équipe vous offre une expérience unique pour sublimer votre beauté naturelle.</p>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="py-16 bg-[#F7D6E0]/30">
+  <section id="services" class="py-12 sm:py-16 bg-[#F7D6E0]/30">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">Nos services</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Nos services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
         <div class="text-center">
-          <svg class="w-12 h-12 mx-auto mb-4 text-[#C8A2C8]" fill="currentColor" viewBox="0 0 20 20">
+          <svg class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 text-[#C8A2C8]" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 2a8 8 0 00-8 8c0 4.42 3.58 8 8 8s8-3.58 8-8a8 8 0 00-8-8zm0 14a6 6 0 110-12 6 6 0 010 12z"/>
           </svg>
-          <h3 class="text-xl font-semibold">Soin du visage</h3>
-          <p>Un soin personnalisé pour une peau éclatante.</p>
+          <h3 class="text-lg sm:text-xl font-semibold">Soin du visage</h3>
+          <p class="text-sm sm:text-base">Un soin personnalisé pour une peau éclatante.</p>
         </div>
         <div class="text-center">
-          <svg class="w-12 h-12 mx-auto mb-4 text-[#C8A2C8]" fill="currentColor" viewBox="0 0 20 20">
+          <svg class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 text-[#C8A2C8]" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 2a8 8 0 00-8 8c0 4.42 3.58 8 8 8s8-3.58 8-8a8 8 0 00-8-8zm0 14a6 6 0 110-12 6 6 0 010 12z"/>
           </svg>
-          <h3 class="text-xl font-semibold">Massage relaxant</h3>
-          <p>Détendez-vous avec nos massages apaisants.</p>
+          <h3 class="text-lg sm:text-xl font-semibold">Massage relaxant</h3>
+          <p class="text-sm sm:text-base">Détendez-vous avec nos massages apaisants.</p>
         </div>
         <div class="text-center">
-          <svg class="w-12 h-12 mx-auto mb-4 text-[#C8A2C8]" fill="currentColor" viewBox="0 0 20 20">
+          <svg class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 text-[#C8A2C8]" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 2a8 8 0 00-8 8c0 4.42 3.58 8 8 8s8-3.58 8-8a8 8 0 00-8-8zm0 14a6 6 0 110-12 6 6 0 010 12z"/>
           </svg>
-          <h3 class="text-xl font-semibold">Épilation au sucre</h3>
-          <p>Une méthode douce et naturelle.</p>
+          <h3 class="text-lg sm:text-xl font-semibold">Épilation au sucre</h3>
+          <p class="text-sm sm:text-base">Une méthode douce et naturelle.</p>
         </div>
         <div class="text-center">
-          <svg class="w-12 h-12 mx-auto mb-4 text-[#C8A2C8]" fill="currentColor" viewBox="0 0 20 20">
+          <svg class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 text-[#C8A2C8]" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 2a8 8 0 00-8 8c0 4.42 3.58 8 8 8s8-3.58 8-8a8 8 0 00-8-8zm0 14a6 6 0 110-12 6 6 0 010 12z"/>
           </svg>
-          <h3 class="text-xl font-semibold">Manucure & pédicure</h3>
-          <p>Des ongles parfaits pour toutes les occasions.</p>
+          <h3 class="text-lg sm:text-xl font-semibold">Manucure & pédicure</h3>
+          <p class="text-sm sm:text-base">Des ongles parfaits pour toutes les occasions.</p>
         </div>
         <div class="text-center">
-          <svg class="w-12 h-12 mx-auto mb-4 text-[#C8A2C8]" fill="currentColor" viewBox="0 0 20 20">
+          <svg class="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-4 text-[#C8A2C8]" fill="currentColor" viewBox="0 0 20 20">
             <path d="M10 2a8 8 0 00-8 8c0 4.42 3.58 8 8 8s8-3.58 8-8a8 8 0 00-8-8zm0 14a6 6 0 110-12 6 6 0 010 12z"/>
           </svg>
-          <h3 class="text-xl font-semibold">Maquillage</h3>
-          <p>Sublimez votre beauté pour chaque événement.</p>
+          <h3 class="text-lg sm:text-xl font-semibold">Maquillage</h3>
+          <p class="text-sm sm:text-base">Sublimez votre beauté pour chaque événement.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Gallery Section -->
-  <section id="galerie" class="py-16">
+  <section id="galerie" class="py-12 sm:py-16">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">Galerie</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <img src="soins de visage.jpeg" alt="Soin du visage" class="w-full h-64 object-cover rounded-lg">
-        <img src="menicure pedicure.jpeg" alt="Manucure" class="w-full h-64 object-cover rounded-lg">
-        <img src="makeup.jpeg" alt="makeup" class="w-full h-64 object-cover rounded-lg">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Galerie</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <img src="soins de visage.jpeg" alt="Soin du visage" class="w-full h-48 sm:h-64 object-cover rounded-lg">
+        <img src="menicure pedicure.jpeg" alt="Manucure" class="w-full h-48 sm:h-64 object-cover rounded-lg">
+        <img src="makeup.jpeg" alt="Maquillage" class="w-full h-48 sm:h-64 object-cover rounded-lg">
       </div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section id="avis" class="py-16 bg-[#F7D6E0]/30">
+  <section id="avis" class="py-12 sm:py-16 bg-[#F7D6E0]/30">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">Avis de nos clients</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Avis de nos clients</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-3xl mx-auto">
         <div class="bg-white p-6 rounded-lg shadow-md">
-          <p class="italic">“Un accueil chaleureux et un service de qualité. Je recommande !”</p>
+          <p class="italic text-sm sm:text-base">“Un accueil chaleureux et un service de qualité. Je recommande !”</p>
           <p class="mt-4 font-semibold">— Sara E.</p>
           <div class="text-[#C8A2C8] mt-2">★★★★★</div>
         </div>
         <div class="bg-white p-6 rounded-lg shadow-md">
-          <p class="italic">“J’ai adoré le soin du visage, ma peau est toute douce maintenant.”</p>
+          <p class="italic text-sm sm:text-base">“J’ai adoré le soin du visage, ma peau est toute douce maintenant.”</p>
           <p class="mt-4 font-semibold">— Fatima Z.</p>
           <div class="text-[#C8A2C8] mt-2">★★★★★</div>
         </div>
@@ -137,44 +162,300 @@
   </section>
 
   <!-- Contact Section -->
-<section id="contact" class="py-16">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12">Contactez-nous</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Contact Info -->
-      <div>
-        <p class="mb-4"><strong>Adresse :</strong> Oujda, quartier Al Qods</p>
-        <p class="mb-4"><strong>Téléphone :</strong> 06 12 34 56 78</p>
-        <p class="mb-4"><strong>Email :</strong> contact@zinabeauty.ma</p>
-        <!-- Placeholder for Google Maps -->
-        <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-          <p class="text-gray-500">[Google Maps Placeholder]</p>
+  <section id="contact" class="py-12 sm:py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Contactez-nous</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+        <!-- Contact Info -->
+        <div>
+          <p class="mb-4 text-sm sm:text-base"><strong>Adresse :</strong> Oujda, quartier Al Qods</p>
+          <p class="mb-4 text-sm sm:text-base"><strong>Téléphone :</strong> 06 12 34 56 78</p>
+          <p class="mb-4 text-sm sm:text-base"><strong>Email :</strong> contact@zinabeauty.ma</p>
+          <div class="bg-gray-200 h-48 sm:h-64 rounded-lg flex items-center justify-center">
+            <p class="text-gray-500 text-sm sm:text-base">[Google Maps Placeholder]</p>
+          </div>
+        </div>
+        <!-- WhatsApp Contact -->
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-center items-center">
+          <p class="mb-4 text-center text-sm sm:text-base">Vous pouvez nous contacter directement via WhatsApp :</p>
+          <a href="https://wa.me/212642087740?text=Bonjour%20Zina%20Beauty,%20je%20souhaite%20prendre%20rendez-vous"
+             target="_blank"
+             class="bg-[#25D366] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-green-400 hover:scale-105 transition text-sm sm:text-base">
+            Envoyer un message WhatsApp
+          </a>
         </div>
       </div>
-
-      <!-- WhatsApp Contact -->
-      <div class="bg-white p-6 rounded-lg shadow-md flex flex-col justify-center items-center">
-        <p class="mb-4 text-center">Vous pouvez nous contacter directement via WhatsApp :</p>
-        <a href="https://wa.me/212642087740?text=Bonjour%20Zina%20Beauty,%20je%20souhaite%20prendre%20rendez-vous"
-           target="_blank"
-           class="bg-[#25D366] text-white px-6 py-3 rounded-lg hover:bg-green-400 hover:scale-105 transition">
-          Envoyer un message WhatsApp
-        </a>
-      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Footer -->
   <footer class="bg-[#C8A2C8] text-white py-6">
     <div class="container mx-auto px-4 text-center">
-      <p>Zina Beauty - La beauté marocaine, au naturel</p>
-      <p class="mt-2">© 2025 Zina Beauty. Tous droits réservés.</p>
+      <p class="text-sm sm:text-base">Zina Beauty - La beauté marocaine, au naturel</p>
+      <p class="mt-2 text-sm sm:text-base">© 2025 Zina Beauty. Tous droits réservés.</p>
     </div>
   </footer>
 
   <script>
+    // Translations object
+    const translations = {
+      fr: {
+        title: "Zina Beauty - La beauté marocaine, au naturel",
+        nav: {
+          home: "Accueil",
+          about: "À propos",
+          services: "Services",
+          gallery: "Galerie",
+          testimonials: "Avis",
+          contact: "Contact"
+        },
+        hero: {
+          title: "Bienvenue chez Zina Beauty",
+          subtitle: "Votre beauté, notre passion"
+        },
+        about: {
+          title: "À propos de nous",
+          content: "Zina Beauty est un havre de paix dédié à la beauté marocaine authentique. Avec des soins inspirés des traditions et des techniques modernes, notre équipe vous offre une expérience unique pour sublimer votre beauté naturelle."
+        },
+        services: {
+          title: "Nos services",
+          facial: "Soin du visage",
+          facial_desc: "Un soin personnalisé pour une peau éclatante.",
+          massage: "Massage relaxant",
+          massage_desc: "Détendez-vous avec nos massages apaisants.",
+          waxing: "Épilation au sucre",
+          waxing_desc: "Une méthode douce et naturelle.",
+          manicure: "Manucure & pédicure",
+          manicure_desc: "Des ongles parfaits pour toutes les occasions.",
+          makeup: "Maquillage",
+          makeup_desc: "Sublimez votre beauté pour chaque événement."
+        },
+        gallery: {
+          title: "Galerie",
+          facial_alt: "Soin du visage",
+          manicure_alt: "Manucure",
+          makeup_alt: "Maquillage"
+        },
+        testimonials: {
+          title: "Avis de nos clients",
+          review1: "“Un accueil chaleureux et un service de qualité. Je recommande !”",
+          review1_author: "— Sara E.",
+          review2: "“J’ai adoré le soin du visage, ma peau est toute douce maintenant.”",
+          review2_author: "— Fatima Z."
+        },
+        contact: {
+          title: "Contactez-nous",
+          address_label: "Adresse :",
+          address: "Oujda, quartier Al Qods",
+          phone_label: "Téléphone :",
+          phone: "06 12 34 56 78",
+          email_label: "Email :",
+          email: "contact@zinabeauty.ma",
+          whatsapp: "Vous pouvez nous contacter directement via WhatsApp :",
+          whatsapp_button: "Envoyer un message WhatsApp"
+        },
+        footer: {
+          line1: "Zina Beauty - La beauté marocaine, au naturel",
+          line2: "© 2025 Zina Beauty. Tous droits réservés."
+        }
+      },
+      ar: {
+        title: "زينة بيوتي - الجمال المغربي الأصيل",
+        nav: {
+          home: "الرئيسية",
+          about: "من نحن",
+          services: "خدماتنا",
+          gallery: "معرض الصور",
+          testimonials: "آراء العملاء",
+          contact: "اتصل بنا"
+        },
+        hero: {
+          title: "مرحبًا بكم في زينة بيوتي",
+          subtitle: "جمالك، شغفنا"
+        },
+        about: {
+          title: "من نحن",
+          content: "زينة بيوتي هي ملاذ مخصص للجمال المغربي الأصيل. من خلال العناية المستوحاة من التقاليد والتقنيات الحديثة، يقدم فريقنا تجربة فريدة لتعزيز جمالك الطبيعي."
+        },
+        services: {
+          title: "خدماتنا",
+          facial: "العناية بالوجه",
+          facial_desc: "عناية مخصصة لبشرة مشرقة.",
+          massage: "تدليك مريح",
+          massage_desc: "استرخِ مع التدليك المريح لدينا.",
+          waxing: "إزالة الشعر بالسكر",
+          waxing_desc: "طريقة لطيفة وطبيعية.",
+          manicure: "مانيكير وباديكير",
+          manicure_desc: "أظافر مثالية لكل المناسبات.",
+          makeup: "مكياج",
+          makeup_desc: "عززي جمالك لكل مناسبة."
+        },
+        gallery: {
+          title: "معرض الصور",
+          facial_alt: "العناية بالوجه",
+          manicure_alt: "مانيكير",
+          makeup_alt: "مكياج"
+        },
+        testimonials: {
+          title: "آراء عملائنا",
+          review1: "“استقبال رائع وخدمة ممتازة. أنصح به بشدة!”",
+          review1_author: "— سارة ع.",
+          review2: "“أحببت العناية بالوجه، بشرتي الآن ناعمة جدًا.”",
+          review2_author: "— فاطمة ز."
+        },
+        contact: {
+          title: "اتصل بنا",
+          address_label: "العنوان :",
+          address: "وجدة، حي القدس",
+          phone_label: "الهاتف :",
+          phone: "06 12 34 56 78",
+          email_label: "البريد الإلكتروني :",
+          email: "contact@zinabeauty.ma",
+          whatsapp: "يمكنكم التواصل معنا مباشرة عبر واتساب :",
+          whatsapp_button: "إرسال رسالة عبر واتساب"
+        },
+        footer: {
+          line1: "زينة بيوتي - الجمال المغربي الأصيل",
+          line2: "© 2025 زينة بيوتي. جميع الحقوق محفوظة."
+        }
+      },
+      en: {
+        title: "Zina Beauty - Authentic Moroccan Beauty",
+        nav: {
+          home: "Home",
+          about: "About",
+          services: "Services",
+          gallery: "Gallery",
+          testimonials: "Testimonials",
+          contact: "Contact"
+        },
+        hero: {
+          title: "Welcome to Zina Beauty",
+          subtitle: "Your beauty, our passion"
+        },
+        about: {
+          title: "About Us",
+          content: "Zina Beauty is a sanctuary dedicated to authentic Moroccan beauty. With treatments inspired by traditions and modern techniques, our team offers a unique experience to enhance your natural beauty."
+        },
+        services: {
+          title: "Our Services",
+          facial: "Facial Care",
+          facial_desc: "Personalized care for radiant skin.",
+          massage: "Relaxing Massage",
+          massage_desc: "Unwind with our soothing massages.",
+          waxing: "Sugar Waxing",
+          waxing_desc: "A gentle and natural method.",
+          manicure: "Manicure & Pedicure",
+          manicure_desc: "Perfect nails for every occasion.",
+          makeup: "Makeup",
+          makeup_desc: "Enhance your beauty for any event."
+        },
+        gallery: {
+          title: "Gallery",
+          facial_alt: "Facial Care",
+          manicure_alt: "Manicure",
+          makeup_alt: "Makeup"
+        },
+        testimonials: {
+          title: "Customer Testimonials",
+          review1: "“Warm welcome and top-quality service. Highly recommend!”",
+          review1_author: "— Sara E.",
+          review2: "“I loved the facial, my skin feels so soft now.”",
+          review2_author: "— Fatima Z."
+        },
+        contact: {
+          title: "Contact Us",
+          address_label: "Address:",
+          address: "Oujda, Al Qods District",
+          phone_label: "Phone:",
+          phone: "06 12 34 56 78",
+          email_label: "Email:",
+          email: "contact@zinabeauty.ma",
+          whatsapp: "You can contact us directly via WhatsApp:",
+          whatsapp_button: "Send a WhatsApp Message"
+        },
+        footer: {
+          line1: "Zina Beauty - Authentic Moroccan Beauty",
+          line2: "© 2025 Zina Beauty. All rights reserved."
+        }
+      }
+    };
+
+    // Function to change language
+    function changeLanguage(lang) {
+      document.getElementById('html-lang').setAttribute('lang', lang);
+      document.getElementById('html-lang').setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      document.title = translations[lang].title;
+
+      // Update navigation
+      document.querySelectorAll('nav a')[0].textContent = translations[lang].nav.home;
+      document.querySelectorAll('nav a')[1].textContent = translations[lang].nav.about;
+      document.querySelectorAll('nav a')[2].textContent = translations[lang].nav.services;
+      document.querySelectorAll('nav a')[3].textContent = translations[lang].nav.gallery;
+      document.querySelectorAll('nav a')[4].textContent = translations[lang].nav.testimonials;
+      document.querySelectorAll('nav a')[5].textContent = translations[lang].nav.contact;
+
+      // Update mobile navigation
+      document.querySelectorAll('#mobile-menu a')[0].textContent = translations[lang].nav.home;
+      document.querySelectorAll('#mobile-menu a')[1].textContent = translations[lang].nav.about;
+      document.querySelectorAll('#mobile-menu a')[2].textContent = translations[lang].nav.services;
+      document.querySelectorAll('#mobile-menu a')[3].textContent = translations[lang].nav.gallery;
+      document.querySelectorAll('#mobile-menu a')[4].textContent = translations[lang].nav.testimonials;
+      document.querySelectorAll('#mobile-menu a')[5].textContent = translations[lang].nav.contact;
+
+      // Update hero section
+      document.querySelector('#accueil h1').textContent = translations[lang].hero.title;
+      document.querySelector('#accueil p').textContent = translations[lang].hero.subtitle;
+
+      // Update about section
+      document.querySelector('#apropos h2').textContent = translations[lang].about.title;
+      document.querySelector('#apropos p').textContent = translations[lang].about.content;
+
+      // Update services section
+      document.querySelector('#services h2').textContent = translations[lang].services.title;
+      document.querySelectorAll('#services h3')[0].textContent = translations[lang].services.facial;
+      document.querySelectorAll('#services p')[0].textContent = translations[lang].services.facial_desc;
+      document.querySelectorAll('#services h3')[1].textContent = translations[lang].services.massage;
+      document.querySelectorAll('#services p')[1].textContent = translations[lang].services.massage_desc;
+      document.querySelectorAll('#services h3')[2].textContent = translations[lang].services.waxing;
+      document.querySelectorAll('#services p')[2].textContent = translations[lang].services.waxing_desc;
+      document.querySelectorAll('#services h3')[3].textContent = translations[lang].services.manicure;
+      document.querySelectorAll('#services p')[3].textContent = translations[lang].services.manicure_desc;
+      document.querySelectorAll('#services h3')[4].textContent = translations[lang].services.makeup;
+      document.querySelectorAll('#services p')[4].textContent = translations[lang].services.makeup_desc;
+
+      // Update gallery section
+      document.querySelector('#galerie h2').textContent = translations[lang].gallery.title;
+      document.querySelectorAll('#galerie img')[0].setAttribute('alt', translations[lang].gallery.facial_alt);
+      document.querySelectorAll('#galerie img')[1].setAttribute('alt', translations[lang].gallery.manicure_alt);
+      document.querySelectorAll('#galerie img')[2].setAttribute('alt', translations[lang].gallery.makeup_alt);
+
+      // Update testimonials section
+      document.querySelector('#avis h2').textContent = translations[lang].testimonials.title;
+      document.querySelectorAll('#avis p')[0].textContent = translations[lang].testimonials.review1;
+      document.querySelectorAll('#avis p')[1].textContent = translations[lang].testimonials.review1_author;
+      document.querySelectorAll('#avis p')[2].textContent = translations[lang].testimonials.review2;
+      document.querySelectorAll('#avis p')[3].textContent = translations[lang].testimonials.review2_author;
+
+      // Update contact section
+      document.querySelector('#contact h2').textContent = translations[lang].contact.title;
+      document.querySelectorAll('#contact p')[0].innerHTML = `<strong>${translations[lang].contact.address_label}</strong> ${translations[lang].contact.address}`;
+      document.querySelectorAll('#contact p')[1].innerHTML = `<strong>${translations[lang].contact.phone_label}</strong> ${translations[lang].contact.phone}`;
+      document.querySelectorAll('#contact p')[2].innerHTML = `<strong>${translations[lang].contact.email_label}</strong> ${translations[lang].contact.email}`;
+      document.querySelectorAll('#contact p')[3].textContent = translations[lang].contact.whatsapp;
+      document.querySelector('#contact a').textContent = translations[lang].contact.whatsapp_button;
+
+      // Update footer
+      document.querySelectorAll('footer p')[0].textContent = translations[lang].footer.line1;
+      document.querySelectorAll('footer p')[1].textContent = translations[lang].footer.line2;
+    }
+
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
